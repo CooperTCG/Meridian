@@ -52,7 +52,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("outfile")
     ap.add_argument("--year", type=int, default=2025)
-    ap.add_argument("--stations", default="KTLRIDGE,AUBURN,WELLTON")
+    ap.add_argument("--stations", default="GUELPH,KITCHNER,WATERLOO,CAMBRIDG,MILTON,BRANTFRD")
     args = ap.parse_args()
 
     frames = []

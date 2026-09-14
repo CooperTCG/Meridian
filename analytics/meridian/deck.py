@@ -20,18 +20,25 @@ DECK_NAME = "MERIDIAN.DAT"
 # because the 2008 schema has nowhere to put them.  MRD-91 is open to
 # move them into a proper table.
 SOIL = {
-    "KTLRIDGE": (0.148, 1200.0),
-    "AUBURN":   (0.162, 900.0),
-    "WELLTON":  (0.131, 1050.0),
+    # Station ids are the A8 fixed-width field in the deck, so <= 8 characters.
+    "GUELPH":   (0.150, 1100.0),
+    "KITCHNER": (0.142, 1050.0),
+    "WATERLOO": (0.138, 1000.0),
+    "CAMBRIDG": (0.155, 1200.0),
+    "MILTON":   (0.148, 950.0),
+    "BRANTFRD": (0.162, 900.0),
 }
 DEFAULT_SOIL = (0.145, 1000.0)
 
 LATITUDE = {
-    "KTLRIDGE": 43.548,
-    "AUBURN":   43.912,
-    "WELLTON":  44.207,
+    "GUELPH":   43.545,
+    "KITCHNER": 43.451,
+    "WATERLOO": 43.466,
+    "CAMBRIDG": 43.360,
+    "MILTON":   43.509,
+    "BRANTFRD": 43.139,
 }
-DEFAULT_LAT = 43.700
+DEFAULT_LAT = 43.545
 
 
 def soil_for(stnid: str):
