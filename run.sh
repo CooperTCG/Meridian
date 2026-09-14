@@ -6,6 +6,10 @@ cd "$(dirname "$0")"
 DB=data/meridian.db
 SPOOL=data/spool_2025.bin
 
+# The data directory is not tracked (its contents are generated). Make sure it
+# exists on a fresh checkout before anything tries to write into it.
+mkdir -p "$(dirname "$DB")"
+
 if [ ! -f "$SPOOL" ]; then
   echo "generating spool"
   python3 tools/gen_packets.py "$SPOOL"
